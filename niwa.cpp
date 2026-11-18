@@ -218,7 +218,7 @@ void pauseScreen() {
     cout << "\nPress ENTER to continue..."; // Prompt the user to press ENTER to continue
     cin.get(); // Wait for the user to press ENTER before proceeding
 }
-
+//  don't mind this boogie man!!!
 void showtitle(){
     clearScreen();
     cout << "\n\n\n           N" << flush;
