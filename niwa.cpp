@@ -722,22 +722,25 @@ int jankenPon() {
         return 2;
     }
 
-    while (choiceJP == 1 && lives > 0) {
+    while (choiceJP == 1) {
+        lives = 3;
+
+        while (lives > 0) {
         int validChoice = 0;
         cout << "\nLives: " << lives;
 
-        while (validChoice == 0) {
-            cout << "\nChoose Rock (r), Paper (p), or Scissors (s)  [Q to quit]: ";
-            cin >> userChoice;
+            while (validChoice == 0) {
+                cout << "\nChoose Rock (r), Paper (p), or Scissors (s)  [Q to quit]: ";
+                cin >> userChoice;
 
-            if (userChoice == "r" || userChoice == "p" || userChoice == "s") {
-                validChoice = 1;
-            } else if (userChoice == "q" || userChoice == "Q") {
-                return 2;
-            } else {
-                cout << "Invalid choice. Please enter only r, p, s, or q.\n";
+                if (userChoice == "r" || userChoice == "p" || userChoice == "s") {
+                    validChoice = 1;
+                } else if (userChoice == "q" || userChoice == "Q") {
+                    return 2;
+                } else {
+                    cout << "Invalid choice. Please enter only r, p, s, or q.\n";
+                }
             }
-        }
 
         cout << "\nJan..." << flush;
         this_thread::sleep_for(chrono::seconds(1));
@@ -777,6 +780,9 @@ int jankenPon() {
         // NOTE: Added a 3-second pause before clearing the screen to allow the player to see the result of the round.
         this_thread::sleep_for(chrono::seconds(3));
         clearScreen();
+        }
+
+        choiceJP = gameOverJP(lives);
     }
 
     return 0;
