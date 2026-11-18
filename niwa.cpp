@@ -653,7 +653,7 @@ int pollenWords() {
     clearScreen();
     cout << "\n==================== POLLEN WORDS ====================\n"
          << "Guess each word using up to 3 clues. Enter answers in lowercase.\n"
-         << "A correct answer earns 3 points after Clue 1, 2 after Clue 2, or 1 after Clue 3.\n"
+         << "A correct answer earns 5 points after Clue 1, 3 after Clue 2, or 2 after Clue 3.\n"
          << "Wrong answers cost 1 life. Revealing clues does not remove your saved points.\n"
          << "Complete 10 word puzzles before losing all 3 lives.\n";
 
