@@ -218,7 +218,7 @@ void pauseScreen() {
     cout << "\nPress ENTER to continue..."; // Prompt the user to press ENTER to continue
     cin.get(); // Wait for the user to press ENTER before proceeding
 }
-//  don't mind this boogie man!!!
+
 void showtitle(){
     clearScreen();
     cout << "\n\n\n           N" << flush;
@@ -518,8 +518,8 @@ int bloomMath() {
         cout << "\n==================== BLOOM MATH ====================\n"
              << "Welcome to Bloom Math! Solve a problem to help your flower bloom.\n"
              << "2 points for each Easy problem solved.\n"
-             << "3 points for each Medium problem solved.\n"
-             << "5 points for each Hard problem solved.\n"
+             << "5 points for each Medium problem solved.\n"
+             << "10 points for each Hard problem solved.\n"
              << "Get 15 correct answers before losing all 3 lives.\n";
     
         cout << "\n[S] Start the game         [B] Back to main menu\n"
